@@ -1,0 +1,111 @@
+---
+title: "Data Munging with Base R"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: '2'
+  html_notebook:
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+---
+
+<br>
+
+**Note**: Assuming you have `Master.csv` in the same project folder.
+
+<br>
+
+# Importing CSV as Data Frame
+
+```{r}
+# Base R function
+d_master = read.csv("Master.csv")
+```
+
+<br>
+
+## Quick Check: First Few Rows
+
+```{r}
+# First few rows
+head(d_master)
+```
+
+## Quick Check: Dimensions
+
+```{r}
+# Dimension
+dim(d_master)
+```
+
+## Quick Check: Summary
+
+```{r}
+# Summary
+summary(d_master)
+```
+
+# Subsetting (Basics)
+
+## Row/Column Numbers 
+
+```{r}
+# Rows 1 to 4, All Columns
+d_master[1:4, ]
+```
+
+```{r}
+# Reverse selection using "-". The following is the same as d_master[1:4, ]
+d_master[-(5:nrow(d_master)), ]
+```
+
+
+```{r}
+# Rows 1 to 4, Columns 1, 2 and 16
+d_master[1:4, c(1, 2, 16)]
+```
+
+## Column Names
+
+```{r}
+# Rows 1 to 4, three user-defined columns
+d_master[1:4, c("playerID", "birthYear", "nameGiven")]
+```
+
+
+
+
+# Filtering (Bascis)
+
+## Using `which`
+
+```{r}
+# Find all "David Allan"
+# note the usage of d_master$  
+d_master[which(d_master$nameGiven == "David Allan"), 
+           c("playerID", "birthYear", "nameGiven")]
+```
+
+## Using AND `&` operator
+
+Also try other operators like 
+- OR `|`
+- More than `>` 
+- Less than `<` etc.
+
+```{r}
+# Find the left-handed "David Allan" 
+d_master[which(d_master$nameGiven == "David Allan" & d_master$bats == "L"),
+           c("playerID", "birthYear", "bats", "nameGiven")]
+```
+
+## Using `grep`
+
+```{r}
+# Find all players with "David" in "nameGiven"
+d_master[grep("David", d_master$nameGiven),
+         c("playerID", "nameGiven")]
+```
+

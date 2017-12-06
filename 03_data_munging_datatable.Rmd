@@ -1,0 +1,90 @@
+---
+title: "Data Munging with data.table"
+output:
+  html_notebook:
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: '2'
+---
+
+<br>
+
+**Note**: Assuming you have `Master.csv` in the same project folder.
+
+<br>
+
+# Importing CSV as Data Table (instead of normal Data Frame)
+
+```{r}
+library(data.table)
+d_master = fread("Master.csv")
+```
+
+## Quick Check
+
+```{r}
+str(d_master)
+```
+
+
+
+
+## Subsetting
+
+## Row/Column Numbers 
+
+```{r}
+# Rows 1 to 4, All Columns
+d_master[1:4, ]
+```
+
+
+```{r}
+# Reverse selection using "-". The following is the same as d_master[1:4, ]
+d_master[-(5:nrow(d_master)), ]
+```
+
+```{r}
+# Rows 1 to 4, Columns 1, 2 and 16
+d_master[1:4, c(1, 2, 16)]
+```
+
+
+## Column Names
+
+```{r}
+# Rows 1 to 4, three user-defined columns
+d_master[1:4, c("playerID", "birthYear", "nameGiven")]
+```
+
+
+# Filtering (Bascis)
+
+## Using 
+
+```{r}
+# Find all "David Allan"
+d_master[nameGiven == "David Allan", c("playerID", "birthYear", "nameGiven")]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

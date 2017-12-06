@@ -1,0 +1,79 @@
+---
+title: "R Packages"
+output:
+  html_notebook:
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: '2'
+---
+
+
+# Installing R Packages in R (Basics)
+
+## Packages on CRAN
+
+```{r}
+# Install a package from CRAN
+install.packages("data.table") # you can omit ""
+```
+
+```{r}
+# Install multiple packages from CRAN
+install.packages(c("data.table", "ggplot2"))
+```
+
+## Packages on GitHub
+
+```{r}
+# First, you need a package called "devtools"
+install.packages("devtools")
+```
+
+```{r}
+# Install packages from GitHub (e.g. DEV version)
+library("devtools")
+devtools::install_github("tidyverse/ggplot2")
+```
+
+<br>
+
+# Loading and Detaching R Packages
+
+```{r}
+# Load data.table
+library("data.table")
+```
+
+```{r}
+# Detach data.table
+detach("package:data.table", unload = TRUE)
+```
+
+<br>
+
+# Installing a Specific Version of R Package
+
+```{r}
+# Install a specific version of R package
+# Simple solution: using devtools
+library("devtools")
+install_version("ggplot2", 
+                version = "2.2.0", 
+                repos = "http://cran.us.r-project.org")
+```
+
+# Using RStudio IDE
+
+T.B.A.
+
+# Using Command Line
+
+T.B.A.
+
+
+
+
