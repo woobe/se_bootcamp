@@ -22,6 +22,9 @@ Materials for
 ## data.table
 
 - Cheat Sheet https://s3.amazonaws.com/assets.datacamp.com/blog_assets/datatable_Cheat_Sheet_R.pdf
+- RMarkdown: `intro_ml_with_r\03_data_munging_datatable.Rmd`
+- HTML Output: `intro_ml_with_r\03_data_munging_datatable.nb.html` [View](https://nbviewer.jupyter.org/github/woobe/se_bootcamp/blob/master/intro_ml_with_r/03_data_munging_datatable.nb.html)
+
 
 ## Markdown and RMarkdown
 
