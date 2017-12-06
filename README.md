@@ -7,17 +7,17 @@ Materials for
 
 ## Data Munging Basics 
 
-- Dataset: `Master.csv` (2.4 MB) [link](https://raw.githubusercontent.com/woobe/se_bootcamp/master/Master.csv)
+- Dataset: `intro_ml_with_r\Master.csv` (2.4 MB)
     - [Source (Website)](http://www.seanlahman.com/baseball-archive/statistics/)
     - [Source (Zip)](http://seanlahman.com/files/database/baseballdatabank-2017.1.zip) 
     
-- RMarkdown: `01_data_munging_base_R.Rmd`
-- HTML Output: `01_data_munging_base_R.nb.html` [View](https://nbviewer.jupyter.org/github/woobe/se_bootcamp/blob/master/01_data_munging_base_R.nb.html)
+- RMarkdown: `intro_ml_with_r\01_data_munging_base_R.Rmd`
+- HTML Output: `intro_ml_with_r\01_data_munging_base_R.nb.html` [View](https://nbviewer.jupyter.org/github/woobe/se_bootcamp/blob/master/intro_ml_with_r/01_data_munging_base_R.nb.html)
 
 ## R Packages
 
 - RMarkdown: `02_packages.Rmd`
-- HTML Output: `02_packages.nb.html` [View](https://nbviewer.jupyter.org/github/woobe/se_bootcamp/blob/master/02_packages.nb.html)
+- HTML Output: `02_packages.nb.html` [View](https://nbviewer.jupyter.org/github/woobe/se_bootcamp/blob/master/intro_ml_with_r/02_packages.nb.html)
 
 ## data.table
 
