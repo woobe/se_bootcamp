@@ -16,8 +16,8 @@ Materials for
 
 ## R Packages
 
-- RMarkdown: `02_packages.Rmd`
-- HTML Output: `02_packages.nb.html` [View](https://nbviewer.jupyter.org/github/woobe/se_bootcamp/blob/master/intro_ml_with_r/02_packages.nb.html)
+- RMarkdown: `intro_ml_with_r\02_packages.Rmd`
+- HTML Output: `intro_ml_with_r\02_packages.nb.html` [View](https://nbviewer.jupyter.org/github/woobe/se_bootcamp/blob/master/intro_ml_with_r/02_packages.nb.html)
 
 ## data.table
 
@@ -25,9 +25,12 @@ Materials for
 
 ## Markdown and RMarkdown
 
+- Markdown Guide on GitHub https://guides.github.com/features/mastering-markdown/
 - RMarkdown Cheat Sheet https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
 
 ## H2O + R
 
-- Training Materials for Aegon https://github.com/woobe/h2o_training_2017_10
+See slides and RScripts in `intro_h2o_with_r`
+
+<br>
 
