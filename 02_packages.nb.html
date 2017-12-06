@@ -178,8 +178,9 @@ $(document).ready(function () {
 </ul></li>
 <li><a href="#loading-and-detaching-r-packages"><span class="toc-section-number">2</span> Loading and Detaching R Packages</a></li>
 <li><a href="#installing-a-specific-version-of-r-package"><span class="toc-section-number">3</span> Installing a Specific Version of R Package</a></li>
-<li><a href="#using-rstudio-ide"><span class="toc-section-number">4</span> Using RStudio IDE</a></li>
-<li><a href="#using-command-line"><span class="toc-section-number">5</span> Using Command Line</a></li>
+<li><a href="#specifc-libirary-folder"><span class="toc-section-number">4</span> Specifc Libirary Folder</a></li>
+<li><a href="#using-rstudio-ide"><span class="toc-section-number">5</span> Using RStudio IDE</a></li>
+<li><a href="#using-command-line"><span class="toc-section-number">6</span> Using Command Line</a></li>
 </ul>
 </div>
 
@@ -190,9 +191,9 @@ $(document).ready(function () {
 <h2><span class="header-section-number">1.1</span> Packages on CRAN</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBJbnN0YWxsIGEgcGFja2FnZSBmcm9tIENSQU5cbmluc3RhbGwucGFja2FnZXMoXCJkYXRhLnRhYmxlXCIpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBJbnN0YWxsIGEgcGFja2FnZSBmcm9tIENSQU5cbmluc3RhbGwucGFja2FnZXMoXCJkYXRhLnRhYmxlXCIpICMgeW91IGNhbiBvbWl0IFwiXCJcbmBgYCJ9 -->
 <pre class="r"><code># Install a package from CRAN
-install.packages(&quot;data.table&quot;)</code></pre>
+install.packages(&quot;data.table&quot;) # you can omit &quot;&quot;</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoidHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNC9kYXRhLnRhYmxlXzEuMTAuNC0zLnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggMTQzMDczOCBieXRlcyAoMS40IE1CKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgMS40IE1CXG4ifQ== -->
 <pre><code>trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.4/data.table_1.10.4-3.tgz'
@@ -200,10 +201,10 @@ Content type 'application/x-gzip' length 1430738 bytes (1.4 MB)
 ==================================================
 downloaded 1.4 MB</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy80ei9wN3l0N180bjRmajFqbHlxNmc0cWhmYncwMDAwZ24vVC8vUnRtcEd5anljQi9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy80ei9wN3l0N180bjRmajFqbHlxNmc0cWhmYncwMDAwZ24vVC8vUnRtcGpoUVlUOS9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
 <pre><code>
 The downloaded binary packages are in
-    /var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T//RtmpGyjycB/downloaded_packages</code></pre>
+    /var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T//RtmpjhQYT9/downloaded_packages</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -224,10 +225,10 @@ Content type 'application/x-gzip' length 2792414 bytes (2.7 MB)
 ==================================================
 downloaded 2.7 MB</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy80ei9wN3l0N180bjRmajFqbHlxNmc0cWhmYncwMDAwZ24vVC8vUnRtcEd5anljQi9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy80ei9wN3l0N180bjRmajFqbHlxNmc0cWhmYncwMDAwZ24vVC8vUnRtcGpoUVlUOS9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
 <pre><code>
 The downloaded binary packages are in
-    /var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T//RtmpGyjycB/downloaded_packages</code></pre>
+    /var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T//RtmpjhQYT9/downloaded_packages</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -246,101 +247,32 @@ Content type 'application/x-gzip' length 439078 bytes (428 KB)
 ==================================================
 downloaded 428 KB</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy80ei9wN3l0N180bjRmajFqbHlxNmc0cWhmYncwMDAwZ24vVC8vUnRtcEd5anljQi9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy80ei9wN3l0N180bjRmajFqbHlxNmc0cWhmYncwMDAwZ24vVC8vUnRtcGpoUVlUOS9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
 <pre><code>
 The downloaded binary packages are in
-    /var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T//RtmpGyjycB/downloaded_packages</code></pre>
+    /var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T//RtmpjhQYT9/downloaded_packages</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBJbnN0YWxsIHBhY2thZ2VzIGZyb20gR2l0SHViIChlLmcuIERFViB2ZXJzaW9uKVxuZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKFwidGlkeXZlcnNlL2dncGxvdDJcIilcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBJbnN0YWxsIHBhY2thZ2VzIGZyb20gR2l0SHViIChlLmcuIERFViB2ZXJzaW9uKVxubGlicmFyeShcImRldnRvb2xzXCIpXG5gYGAifQ== -->
 <pre class="r"><code># Install packages from GitHub (e.g. DEV version)
-devtools::install_github(&quot;tidyverse/ggplot2&quot;)</code></pre>
+library(&quot;devtools&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRG93bmxvYWRpbmcgR2l0SHViIHJlcG8gdGlkeXZlcnNlL2dncGxvdDJAbWFzdGVyXG5mcm9tIFVSTCBodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL3RpZHl2ZXJzZS9nZ3Bsb3QyL3ppcGJhbGwvbWFzdGVyXG5JbnN0YWxsaW5nIGdncGxvdDJcbnRyeWluZyBVUkwgJ2h0dHBzOi8vY3Jhbi5yc3R1ZGlvLmNvbS9iaW4vbWFjb3N4L2VsLWNhcGl0YW4vY29udHJpYi8zLjQvbGF6eWV2YWxfMC4yLjEudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAxMjM0NzIgYnl0ZXMgKDEyMCBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDEyMCBLQlxuXG5JbnN0YWxsaW5nIGxhenlldmFsXG4nL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9SZXNvdXJjZXMvYmluL1InIC0tbm8tc2l0ZS1maWxlIC0tbm8tZW52aXJvbiAgXFxcbiAgLS1uby1zYXZlIC0tbm8tcmVzdG9yZSAtLXF1aWV0IENNRCBJTlNUQUxMICBcXFxuICAnL3ByaXZhdGUvdmFyL2ZvbGRlcnMvNHovcDd5dDdfNG40Zmoxamx5cTZnNHFoZmJ3MDAwMGduL1QvUnRtcEd5anljQi9kZXZ0b29sc2I2MTc0NDc4YWNiOC9sYXp5ZXZhbCcgIFxcXG4gIC0tbGlicmFyeT0nL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjQvUmVzb3VyY2VzL2xpYnJhcnknICBcXFxuICAtLWluc3RhbGwtdGVzdHMgXG5cbiogaW5zdGFsbGluZyAqYmluYXJ5KiBwYWNrYWdlIOKAmGxhenlldmFs4oCZIC4uLlxuKiBET05FIChsYXp5ZXZhbClcbkRvd25sb2FkaW5nIEdpdEh1YiByZXBvIGhhZGxleS9zY2FsZXNAbWFzdGVyXG5mcm9tIFVSTCBodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL2hhZGxleS9zY2FsZXMvemlwYmFsbC9tYXN0ZXJcbkluc3RhbGxpbmcgc2NhbGVzXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy40L1JjcHBfMC4xMi4xNC50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDQzNDEzNTkgYnl0ZXMgKDQuMSBNQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDQuMSBNQlxuXG5JbnN0YWxsaW5nIFJjcHBcbicvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1Jlc291cmNlcy9iaW4vUicgLS1uby1zaXRlLWZpbGUgLS1uby1lbnZpcm9uICBcXFxuICAtLW5vLXNhdmUgLS1uby1yZXN0b3JlIC0tcXVpZXQgQ01EIElOU1RBTEwgIFxcXG4gICcvcHJpdmF0ZS92YXIvZm9sZGVycy80ei9wN3l0N180bjRmajFqbHlxNmc0cWhmYncwMDAwZ24vVC9SdG1wR3lqeWNCL2RldnRvb2xzYjYxNzY4NzA2Yzc4L1JjcHAnICBcXFxuICAtLWxpYnJhcnk9Jy9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy40L1Jlc291cmNlcy9saWJyYXJ5JyAgXFxcbiAgLS1pbnN0YWxsLXRlc3RzIFxuXG4qIGluc3RhbGxpbmcgKmJpbmFyeSogcGFja2FnZSDigJhSY3Bw4oCZIC4uLlxuKiBET05FIChSY3BwKVxuJy9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvUmVzb3VyY2VzL2Jpbi9SJyAtLW5vLXNpdGUtZmlsZSAtLW5vLWVudmlyb24gIFxcXG4gIC0tbm8tc2F2ZSAtLW5vLXJlc3RvcmUgLS1xdWlldCBDTUQgSU5TVEFMTCAgXFxcbiAgJy9wcml2YXRlL3Zhci9mb2xkZXJzLzR6L3A3eXQ3XzRuNGZqMWpseXE2ZzRxaGZidzAwMDBnbi9UL1J0bXBHeWp5Y0IvZGV2dG9vbHNiNjE3MWM3MWYxOGUvaGFkbGV5LXNjYWxlcy1kNzY3OTE1JyAgXFxcbiAgLS1saWJyYXJ5PScvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1ZlcnNpb25zLzMuNC9SZXNvdXJjZXMvbGlicmFyeScgIFxcXG4gIC0taW5zdGFsbC10ZXN0cyBcblxuKiBpbnN0YWxsaW5nICpzb3VyY2UqIHBhY2thZ2Ug4oCYc2NhbGVz4oCZIC4uLlxuKiogbGlic1xuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoicGFja2FnZSDigJhkZXZ0b29sc+KAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDMuNC4yXG4ifQ== -->
+<pre><code>package ‘devtools’ was built under R version 3.4.2</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKFwidGlkeXZlcnNlL2dncGxvdDJcIilcbmBgYCJ9 -->
+<pre class="r"><code>devtools::install_github(&quot;tidyverse/ggplot2&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRG93bmxvYWRpbmcgR2l0SHViIHJlcG8gdGlkeXZlcnNlL2dncGxvdDJAbWFzdGVyXG5mcm9tIFVSTCBodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL3RpZHl2ZXJzZS9nZ3Bsb3QyL3ppcGJhbGwvbWFzdGVyXG5JbnN0YWxsaW5nIGdncGxvdDJcbicvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1Jlc291cmNlcy9iaW4vUicgLS1uby1zaXRlLWZpbGUgLS1uby1lbnZpcm9uIC0tbm8tc2F2ZSAgXFxcbiAgLS1uby1yZXN0b3JlIC0tcXVpZXQgQ01EIElOU1RBTEwgIFxcXG4gICcvcHJpdmF0ZS92YXIvZm9sZGVycy80ei9wN3l0N180bjRmajFqbHlxNmc0cWhmYncwMDAwZ24vVC9SdG1wamhRWVQ5L2RldnRvb2xzNjBmMzYxODQyOWRlL3RpZHl2ZXJzZS1nZ3Bsb3QyLTdiNWMxODUnICBcXFxuICAtLWxpYnJhcnk9Jy9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy40L1Jlc291cmNlcy9saWJyYXJ5JyAgXFxcbiAgLS1pbnN0YWxsLXRlc3RzIFxuXG4qIGluc3RhbGxpbmcgKnNvdXJjZSogcGFja2FnZSDigJhnZ3Bsb3Qy4oCZIC4uLlxuKiogUlxuKiogZGF0YVxuKioqIG1vdmluZyBkYXRhc2V0cyB0byBsYXp5bG9hZCBEQlxuKiogaW5zdFxuKiogdGVzdHNcbioqIHByZXBhcmluZyBwYWNrYWdlIGZvciBsYXp5IGxvYWRpbmdcbioqIGhlbHBcbioqKiBpbnN0YWxsaW5nIGhlbHAgaW5kaWNlc1xuKioqIGNvcHlpbmcgZmlndXJlc1xuKiogYnVpbGRpbmcgcGFja2FnZSBpbmRpY2VzXG4qKiBpbnN0YWxsaW5nIHZpZ25ldHRlc1xuKiogdGVzdGluZyBpZiBpbnN0YWxsZWQgcGFja2FnZSBjYW4gYmUgbG9hZGVkXG4qIERPTkUgKGdncGxvdDIpXG4ifQ== -->
 <pre><code>Downloading GitHub repo tidyverse/ggplot2@master
 from URL https://api.github.com/repos/tidyverse/ggplot2/zipball/master
 Installing ggplot2
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.4/lazyeval_0.2.1.tgz'
-Content type 'application/x-gzip' length 123472 bytes (120 KB)
-==================================================
-downloaded 120 KB
-
-Installing lazyeval
-'/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file --no-environ  \
-  --no-save --no-restore --quiet CMD INSTALL  \
-  '/private/var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T/RtmpGyjycB/devtoolsb6174478acb8/lazyeval'  \
-  --library='/Library/Frameworks/R.framework/Versions/3.4/Resources/library'  \
-  --install-tests 
-
-* installing *binary* package ‘lazyeval’ ...
-* DONE (lazyeval)
-Downloading GitHub repo hadley/scales@master
-from URL https://api.github.com/repos/hadley/scales/zipball/master
-Installing scales
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.4/Rcpp_0.12.14.tgz'
-Content type 'application/x-gzip' length 4341359 bytes (4.1 MB)
-==================================================
-downloaded 4.1 MB
-
-Installing Rcpp
-'/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file --no-environ  \
-  --no-save --no-restore --quiet CMD INSTALL  \
-  '/private/var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T/RtmpGyjycB/devtoolsb61768706c78/Rcpp'  \
-  --library='/Library/Frameworks/R.framework/Versions/3.4/Resources/library'  \
-  --install-tests 
-
-* installing *binary* package ‘Rcpp’ ...
-* DONE (Rcpp)
-'/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file --no-environ  \
-  --no-save --no-restore --quiet CMD INSTALL  \
-  '/private/var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T/RtmpGyjycB/devtoolsb6171c71f18e/hadley-scales-d767915'  \
-  --library='/Library/Frameworks/R.framework/Versions/3.4/Resources/library'  \
-  --install-tests 
-
-* installing *source* package ‘scales’ ...
-** libs</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiY2xhbmcrKyAgLUkvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1Jlc291cmNlcy9pbmNsdWRlIC1ETkRFQlVHICAtSVwiL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjQvUmVzb3VyY2VzL2xpYnJhcnkvUmNwcC9pbmNsdWRlXCIgLUkvdXNyL2xvY2FsL2luY2x1ZGUgICAtZlBJQyAgLVdhbGwgLWcgLU8yICAtYyBSY3BwRXhwb3J0cy5jcHAgLW8gUmNwcEV4cG9ydHMub1xuY2xhbmcrKyAgLUkvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1Jlc291cmNlcy9pbmNsdWRlIC1ETkRFQlVHICAtSVwiL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjQvUmVzb3VyY2VzL2xpYnJhcnkvUmNwcC9pbmNsdWRlXCIgLUkvdXNyL2xvY2FsL2luY2x1ZGUgICAtZlBJQyAgLVdhbGwgLWcgLU8yICAtYyBjb2xvcnMuY3BwIC1vIGNvbG9ycy5vXG5jbGFuZysrIC1keW5hbWljbGliIC1XbCwtaGVhZGVycGFkX21heF9pbnN0YWxsX25hbWVzIC11bmRlZmluZWQgZHluYW1pY19sb29rdXAgLXNpbmdsZV9tb2R1bGUgLW11bHRpcGx5X2RlZmluZWQgc3VwcHJlc3MgLUwvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1Jlc291cmNlcy9saWIgLUwvdXNyL2xvY2FsL2xpYiAtbyBzY2FsZXMuc28gUmNwcEV4cG9ydHMubyBjb2xvcnMubyAtRi9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvLi4gLWZyYW1ld29yayBSIC1XbCwtZnJhbWV3b3JrIC1XbCxDb3JlRm91bmRhdGlvblxuIn0= -->
-<pre><code>clang++  -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG  -I&quot;/Library/Frameworks/R.framework/Versions/3.4/Resources/library/Rcpp/include&quot; -I/usr/local/include   -fPIC  -Wall -g -O2  -c RcppExports.cpp -o RcppExports.o
-clang++  -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG  -I&quot;/Library/Frameworks/R.framework/Versions/3.4/Resources/library/Rcpp/include&quot; -I/usr/local/include   -fPIC  -Wall -g -O2  -c colors.cpp -o colors.o
-clang++ -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Resources/lib -L/usr/local/lib -o scales.so RcppExports.o colors.o -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiaW5zdGFsbGluZyB0byAvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1ZlcnNpb25zLzMuNC9SZXNvdXJjZXMvbGlicmFyeS9zY2FsZXMvbGlic1xuKiogUlxuKiogdGVzdHNcbioqIHByZXBhcmluZyBwYWNrYWdlIGZvciBsYXp5IGxvYWRpbmdcbioqIGhlbHBcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogc2NhbGVzXG4qKiogaW5zdGFsbGluZyBoZWxwIGluZGljZXNcbioqIGJ1aWxkaW5nIHBhY2thZ2UgaW5kaWNlc1xuKiogdGVzdGluZyBpZiBpbnN0YWxsZWQgcGFja2FnZSBjYW4gYmUgbG9hZGVkXG4qIERPTkUgKHNjYWxlcylcbkRvd25sb2FkaW5nIEdpdEh1YiByZXBvIGppbWhlc3Rlci93aXRockBtYXN0ZXJcbmZyb20gVVJMIGh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvamltaGVzdGVyL3dpdGhyL3ppcGJhbGwvbWFzdGVyXG5JbnN0YWxsaW5nIHdpdGhyXG4nL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9SZXNvdXJjZXMvYmluL1InIC0tbm8tc2l0ZS1maWxlIC0tbm8tZW52aXJvbiAgXFxcbiAgLS1uby1zYXZlIC0tbm8tcmVzdG9yZSAtLXF1aWV0IENNRCBJTlNUQUxMICBcXFxuICAnL3ByaXZhdGUvdmFyL2ZvbGRlcnMvNHovcDd5dDdfNG40Zmoxamx5cTZnNHFoZmJ3MDAwMGduL1QvUnRtcEd5anljQi9kZXZ0b29sc2I2MTc0MTNkMjc1NC9yLWxpYi13aXRoci1mZTgxYzAwJyAgXFxcbiAgLS1saWJyYXJ5PScvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1ZlcnNpb25zLzMuNC9SZXNvdXJjZXMvbGlicmFyeScgIFxcXG4gIC0taW5zdGFsbC10ZXN0cyBcblxuKiBpbnN0YWxsaW5nICpzb3VyY2UqIHBhY2thZ2Ug4oCYd2l0aHLigJkgLi4uXG4qKiBSXG4qKiB0ZXN0c1xuKiogcHJlcGFyaW5nIHBhY2thZ2UgZm9yIGxhenkgbG9hZGluZ1xuKiogaGVscFxuKioqIGluc3RhbGxpbmcgaGVscCBpbmRpY2VzXG4qKiBidWlsZGluZyBwYWNrYWdlIGluZGljZXNcbioqIGluc3RhbGxpbmcgdmlnbmV0dGVzXG4qKiB0ZXN0aW5nIGlmIGluc3RhbGxlZCBwYWNrYWdlIGNhbiBiZSBsb2FkZWRcbiogRE9ORSAod2l0aHIpXG4nL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9SZXNvdXJjZXMvYmluL1InIC0tbm8tc2l0ZS1maWxlIC0tbm8tZW52aXJvbiAgXFxcbiAgLS1uby1zYXZlIC0tbm8tcmVzdG9yZSAtLXF1aWV0IENNRCBJTlNUQUxMICBcXFxuICAnL3ByaXZhdGUvdmFyL2ZvbGRlcnMvNHovcDd5dDdfNG40Zmoxamx5cTZnNHFoZmJ3MDAwMGduL1QvUnRtcEd5anljQi9kZXZ0b29sc2I2MTdmYzE5MzhhL3RpZHl2ZXJzZS1nZ3Bsb3QyLTdiNWMxODUnICBcXFxuICAtLWxpYnJhcnk9Jy9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy40L1Jlc291cmNlcy9saWJyYXJ5JyAgXFxcbiAgLS1pbnN0YWxsLXRlc3RzIFxuXG4qIGluc3RhbGxpbmcgKnNvdXJjZSogcGFja2FnZSDigJhnZ3Bsb3Qy4oCZIC4uLlxuKiogUlxuKiogZGF0YVxuKioqIG1vdmluZyBkYXRhc2V0cyB0byBsYXp5bG9hZCBEQlxuKiogaW5zdFxuKiogdGVzdHNcbioqIHByZXBhcmluZyBwYWNrYWdlIGZvciBsYXp5IGxvYWRpbmdcbioqIGhlbHBcbioqKiBpbnN0YWxsaW5nIGhlbHAgaW5kaWNlc1xuKioqIGNvcHlpbmcgZmlndXJlc1xuKiogYnVpbGRpbmcgcGFja2FnZSBpbmRpY2VzXG4qKiBpbnN0YWxsaW5nIHZpZ25ldHRlc1xuKiogdGVzdGluZyBpZiBpbnN0YWxsZWQgcGFja2FnZSBjYW4gYmUgbG9hZGVkXG4qIERPTkUgKGdncGxvdDIpXG4ifQ== -->
-<pre><code>installing to /Library/Frameworks/R.framework/Versions/3.4/Resources/library/scales/libs
-** R
-** tests
-** preparing package for lazy loading
-** help
-Loading required package: scales
-*** installing help indices
-** building package indices
-** testing if installed package can be loaded
-* DONE (scales)
-Downloading GitHub repo jimhester/withr@master
-from URL https://api.github.com/repos/jimhester/withr/zipball/master
-Installing withr
-'/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file --no-environ  \
-  --no-save --no-restore --quiet CMD INSTALL  \
-  '/private/var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T/RtmpGyjycB/devtoolsb617413d2754/r-lib-withr-fe81c00'  \
-  --library='/Library/Frameworks/R.framework/Versions/3.4/Resources/library'  \
-  --install-tests 
-
-* installing *source* package ‘withr’ ...
-** R
-** tests
-** preparing package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** installing vignettes
-** testing if installed package can be loaded
-* DONE (withr)
-'/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file --no-environ  \
-  --no-save --no-restore --quiet CMD INSTALL  \
-  '/private/var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T/RtmpGyjycB/devtoolsb617fc1938a/tidyverse-ggplot2-7b5c185'  \
+'/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file --no-environ --no-save  \
+  --no-restore --quiet CMD INSTALL  \
+  '/private/var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T/RtmpjhQYT9/devtools60f3618429de/tidyverse-ggplot2-7b5c185'  \
   --library='/Library/Frameworks/R.framework/Versions/3.4/Resources/library'  \
   --install-tests 
 
@@ -372,6 +304,12 @@ Installing withr
 <pre class="r"><code># Load data.table
 library(&quot;data.table&quot;)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoicGFja2FnZSDigJhkYXRhLnRhYmxl4oCZIHdhcyBidWlsdCB1bmRlciBSIHZlcnNpb24gMy40LjJkYXRhLnRhYmxlIDEuMTAuNC4zXG4gIFRoZSBmYXN0ZXN0IHdheSB0byBsZWFybiAoYnkgZGF0YS50YWJsZSBhdXRob3JzKTogaHR0cHM6Ly93d3cuZGF0YWNhbXAuY29tL2NvdXJzZXMvZGF0YS1hbmFseXNpcy10aGUtZGF0YS10YWJsZS13YXlcbiAgRG9jdW1lbnRhdGlvbjogP2RhdGEudGFibGUsIGV4YW1wbGUoZGF0YS50YWJsZSkgYW5kIGJyb3dzZVZpZ25ldHRlcyhcImRhdGEudGFibGVcIilcbiAgUmVsZWFzZSBub3RlcywgdmlkZW9zIGFuZCBzbGlkZXM6IGh0dHA6Ly9yLWRhdGF0YWJsZS5jb21cbiJ9 -->
+<pre><code>package ‘data.table’ was built under R version 3.4.2data.table 1.10.4.3
+  The fastest way to learn (by data.table authors): https://www.datacamp.com/courses/data-analysis-the-data-table-way
+  Documentation: ?data.table, example(data.table) and browseVignettes(&quot;data.table&quot;)
+  Release notes, videos and slides: http://r-datatable.com</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -388,25 +326,20 @@ detach(&quot;package:data.table&quot;, unload = TRUE)</code></pre>
 <h1><span class="header-section-number">3</span> Installing a Specific Version of R Package</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBJbnN0YWxsIGEgc3BlY2lmaWMgdmVyc2lvbiBvZiBSIHBhY2thZ2VcbiMgU2ltcGxlIHNvbHV0aW9uOiB1c2luZyBkZXZ0b29sc1xubGlicmFyeShcImRldnRvb2xzXCIpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBJbnN0YWxsIGEgc3BlY2lmaWMgdmVyc2lvbiBvZiBSIHBhY2thZ2VcbiMgU2ltcGxlIHNvbHV0aW9uOiB1c2luZyBkZXZ0b29sc1xubGlicmFyeShcImRldnRvb2xzXCIpXG5pbnN0YWxsX3ZlcnNpb24oXCJnZ3Bsb3QyXCIsIFxuICAgICAgICAgICAgICAgIHZlcnNpb24gPSBcIjIuMi4wXCIsIFxuICAgICAgICAgICAgICAgIHJlcG9zID0gXCJodHRwOi8vY3Jhbi51cy5yLXByb2plY3Qub3JnXCIpXG5gYGAifQ== -->
 <pre class="r"><code># Install a specific version of R package
 # Simple solution: using devtools
-library(&quot;devtools&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoicGFja2FnZSDigJhkZXZ0b29sc+KAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDMuNC4yXG4ifQ== -->
-<pre><code>package ‘devtools’ was built under R version 3.4.2</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbF92ZXJzaW9uKFwiZ2dwbG90MlwiLCBcbiAgICAgICAgICAgICAgICB2ZXJzaW9uID0gXCIyLjIuMFwiLCBcbiAgICAgICAgICAgICAgICByZXBvcyA9IFwiaHR0cDovL2NyYW4udXMuci1wcm9qZWN0Lm9yZ1wiKVxuYGBgIn0= -->
-<pre class="r"><code>install_version(&quot;ggplot2&quot;, 
+library(&quot;devtools&quot;)
+install_version(&quot;ggplot2&quot;, 
                 version = &quot;2.2.0&quot;, 
                 repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRG93bmxvYWRpbmcgcGFja2FnZSBmcm9tIHVybDogaHR0cDovL2NyYW4udXMuci1wcm9qZWN0Lm9yZy9zcmMvY29udHJpYi9BcmNoaXZlL2dncGxvdDIvZ2dwbG90Ml8yLjIuMC50YXIuZ3pcbkluc3RhbGxpbmcgZ2dwbG90MlxuJy9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvUmVzb3VyY2VzL2Jpbi9SJyAtLW5vLXNpdGUtZmlsZSAtLW5vLWVudmlyb24gIFxcXG4gIC0tbm8tc2F2ZSAtLW5vLXJlc3RvcmUgLS1xdWlldCBDTUQgSU5TVEFMTCAgXFxcbiAgJy9wcml2YXRlL3Zhci9mb2xkZXJzLzR6L3A3eXQ3XzRuNGZqMWpseXE2ZzRxaGZidzAwMDBnbi9UL1J0bXBBYVRPMm4vZGV2dG9vbHNiOGY5MWQwMTQ0MjQvZ2dwbG90MicgIFxcXG4gIC0tbGlicmFyeT0nL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjQvUmVzb3VyY2VzL2xpYnJhcnknICBcXFxuICAtLWluc3RhbGwtdGVzdHMgXG5cbiogaW5zdGFsbGluZyAqc291cmNlKiBwYWNrYWdlIOKAmGdncGxvdDLigJkgLi4uXG4qKiBwYWNrYWdlIOKAmGdncGxvdDLigJkgc3VjY2Vzc2Z1bGx5IHVucGFja2VkIGFuZCBNRDUgc3VtcyBjaGVja2VkXG4qKiBSXG4qKiBkYXRhXG4qKiogbW92aW5nIGRhdGFzZXRzIHRvIGxhenlsb2FkIERCXG4qKiBpbnN0XG4qKiB0ZXN0c1xuKiogcHJlcGFyaW5nIHBhY2thZ2UgZm9yIGxhenkgbG9hZGluZ1xuV2FybmluZyBpbiBzdHJ1Y3R1cmUoTlVMTCwgY2xhc3MgPSBcIndhaXZlclwiKSA6XG4gIENhbGxpbmcgJ3N0cnVjdHVyZShOVUxMLCAqKScgaXMgZGVwcmVjYXRlZCwgYXMgTlVMTCBjYW5ub3QgaGF2ZSBhdHRyaWJ1dGVzLlxuICBDb25zaWRlciAnc3RydWN0dXJlKGxpc3QoKSwgKiknIGluc3RlYWQuXG5XYXJuaW5nIGluIHN0cnVjdHVyZShOVUxMLCBjbGFzcyA9IFwid2FpdmVyXCIpIDpcbiAgQ2FsbGluZyAnc3RydWN0dXJlKE5VTEwsICopJyBpcyBkZXByZWNhdGVkLCBhcyBOVUxMIGNhbm5vdCBoYXZlIGF0dHJpYnV0ZXMuXG4gIENvbnNpZGVyICdzdHJ1Y3R1cmUobGlzdCgpLCAqKScgaW5zdGVhZC5cbldhcm5pbmcgaW4gc3RydWN0dXJlKE5VTEwsIGNsYXNzID0gXCJ3YWl2ZXJcIikgOlxuICBDYWxsaW5nICdzdHJ1Y3R1cmUoTlVMTCwgKiknIGlzIGRlcHJlY2F0ZWQsIGFzIE5VTEwgY2Fubm90IGhhdmUgYXR0cmlidXRlcy5cbiAgQ29uc2lkZXIgJ3N0cnVjdHVyZShsaXN0KCksICopJyBpbnN0ZWFkLlxuV2FybmluZyBpbiBzdHJ1Y3R1cmUoTlVMTCwgY2xhc3MgPSBcIndhaXZlclwiKSA6XG4gIENhbGxpbmcgJ3N0cnVjdHVyZShOVUxMLCAqKScgaXMgZGVwcmVjYXRlZCwgYXMgTlVMTCBjYW5ub3QgaGF2ZSBhdHRyaWJ1dGVzLlxuICBDb25zaWRlciAnc3RydWN0dXJlKGxpc3QoKSwgKiknIGluc3RlYWQuXG5XYXJuaW5nIGluIHN0cnVjdHVyZShOVUxMLCBjbGFzcyA9IFwid2FpdmVyXCIpIDpcbiAgQ2FsbGluZyAnc3RydWN0dXJlKE5VTEwsICopJyBpcyBkZXByZWNhdGVkLCBhcyBOVUxMIGNhbm5vdCBoYXZlIGF0dHJpYnV0ZXMuXG4gIENvbnNpZGVyICdzdHJ1Y3R1cmUobGlzdCgpLCAqKScgaW5zdGVhZC5cbldhcm5pbmcgaW4gc3RydWN0dXJlKE5VTEwsIGNsYXNzID0gXCJ3YWl2ZXJcIikgOlxuICBDYWxsaW5nICdzdHJ1Y3R1cmUoTlVMTCwgKiknIGlzIGRlcHJlY2F0ZWQsIGFzIE5VTEwgY2Fubm90IGhhdmUgYXR0cmlidXRlcy5cbiAgQ29uc2lkZXIgJ3N0cnVjdHVyZShsaXN0KCksICopJyBpbnN0ZWFkLlxuV2FybmluZyBpbiBzdHJ1Y3R1cmUoTlVMTCwgY2xhc3MgPSBcIndhaXZlclwiKSA6XG4gIENhbGxpbmcgJ3N0cnVjdHVyZShOVUxMLCAqKScgaXMgZGVwcmVjYXRlZCwgYXMgTlVMTCBjYW5ub3QgaGF2ZSBhdHRyaWJ1dGVzLlxuICBDb25zaWRlciAnc3RydWN0dXJlKGxpc3QoKSwgKiknIGluc3RlYWQuXG5XYXJuaW5nIGluIHN0cnVjdHVyZShOVUxMLCBjbGFzcyA9IFwid2FpdmVyXCIpIDpcbiAgQ2FsbGluZyAnc3RydWN0dXJlKE5VTEwsICopJyBpcyBkZXByZWNhdGVkLCBhcyBOVUxMIGNhbm5vdCBoYXZlIGF0dHJpYnV0ZXMuXG4gIENvbnNpZGVyICdzdHJ1Y3R1cmUobGlzdCgpLCAqKScgaW5zdGVhZC5cbldhcm5pbmcgaW4gc3RydWN0dXJlKE5VTEwsIGNsYXNzID0gXCJ3YWl2ZXJcIikgOlxuICBDYWxsaW5nICdzdHJ1Y3R1cmUoTlVMTCwgKiknIGlzIGRlcHJlY2F0ZWQsIGFzIE5VTEwgY2Fubm90IGhhdmUgYXR0cmlidXRlcy5cbiAgQ29uc2lkZXIgJ3N0cnVjdHVyZShsaXN0KCksICopJyBpbnN0ZWFkLlxuKiogaGVscFxuKioqIGluc3RhbGxpbmcgaGVscCBpbmRpY2VzXG4qKiBidWlsZGluZyBwYWNrYWdlIGluZGljZXNcbioqIGluc3RhbGxpbmcgdmlnbmV0dGVzXG4qKiB0ZXN0aW5nIGlmIGluc3RhbGxlZCBwYWNrYWdlIGNhbiBiZSBsb2FkZWRcbiogRE9ORSAoZ2dwbG90MilcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiRG93bmxvYWRpbmcgcGFja2FnZSBmcm9tIHVybDogaHR0cDovL2NyYW4udXMuci1wcm9qZWN0Lm9yZy9zcmMvY29udHJpYi9BcmNoaXZlL2dncGxvdDIvZ2dwbG90Ml8yLjIuMC50YXIuZ3pcbkluc3RhbGxpbmcgZ2dwbG90MlxuJy9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvUmVzb3VyY2VzL2Jpbi9SJyAtLW5vLXNpdGUtZmlsZSAtLW5vLWVudmlyb24gLS1uby1zYXZlICBcXFxuICAtLW5vLXJlc3RvcmUgLS1xdWlldCBDTUQgSU5TVEFMTCAgXFxcbiAgJy9wcml2YXRlL3Zhci9mb2xkZXJzLzR6L3A3eXQ3XzRuNGZqMWpseXE2ZzRxaGZidzAwMDBnbi9UL1J0bXBqaFFZVDkvZGV2dG9vbHM2MGYzMmU3ZDBiNjAvZ2dwbG90MicgIFxcXG4gIC0tbGlicmFyeT0nL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjQvUmVzb3VyY2VzL2xpYnJhcnknICBcXFxuICAtLWluc3RhbGwtdGVzdHMgXG5cbiogaW5zdGFsbGluZyAqc291cmNlKiBwYWNrYWdlIOKAmGdncGxvdDLigJkgLi4uXG4qKiBwYWNrYWdlIOKAmGdncGxvdDLigJkgc3VjY2Vzc2Z1bGx5IHVucGFja2VkIGFuZCBNRDUgc3VtcyBjaGVja2VkXG4qKiBSXG4qKiBkYXRhXG4qKiogbW92aW5nIGRhdGFzZXRzIHRvIGxhenlsb2FkIERCXG4qKiBpbnN0XG4qKiB0ZXN0c1xuKiogcHJlcGFyaW5nIHBhY2thZ2UgZm9yIGxhenkgbG9hZGluZ1xuV2FybmluZyBpbiBzdHJ1Y3R1cmUoTlVMTCwgY2xhc3MgPSBcIndhaXZlclwiKSA6XG4gIENhbGxpbmcgJ3N0cnVjdHVyZShOVUxMLCAqKScgaXMgZGVwcmVjYXRlZCwgYXMgTlVMTCBjYW5ub3QgaGF2ZSBhdHRyaWJ1dGVzLlxuICBDb25zaWRlciAnc3RydWN0dXJlKGxpc3QoKSwgKiknIGluc3RlYWQuXG5XYXJuaW5nIGluIHN0cnVjdHVyZShOVUxMLCBjbGFzcyA9IFwid2FpdmVyXCIpIDpcbiAgQ2FsbGluZyAnc3RydWN0dXJlKE5VTEwsICopJyBpcyBkZXByZWNhdGVkLCBhcyBOVUxMIGNhbm5vdCBoYXZlIGF0dHJpYnV0ZXMuXG4gIENvbnNpZGVyICdzdHJ1Y3R1cmUobGlzdCgpLCAqKScgaW5zdGVhZC5cbldhcm5pbmcgaW4gc3RydWN0dXJlKE5VTEwsIGNsYXNzID0gXCJ3YWl2ZXJcIikgOlxuICBDYWxsaW5nICdzdHJ1Y3R1cmUoTlVMTCwgKiknIGlzIGRlcHJlY2F0ZWQsIGFzIE5VTEwgY2Fubm90IGhhdmUgYXR0cmlidXRlcy5cbiAgQ29uc2lkZXIgJ3N0cnVjdHVyZShsaXN0KCksICopJyBpbnN0ZWFkLlxuV2FybmluZyBpbiBzdHJ1Y3R1cmUoTlVMTCwgY2xhc3MgPSBcIndhaXZlclwiKSA6XG4gIENhbGxpbmcgJ3N0cnVjdHVyZShOVUxMLCAqKScgaXMgZGVwcmVjYXRlZCwgYXMgTlVMTCBjYW5ub3QgaGF2ZSBhdHRyaWJ1dGVzLlxuICBDb25zaWRlciAnc3RydWN0dXJlKGxpc3QoKSwgKiknIGluc3RlYWQuXG5XYXJuaW5nIGluIHN0cnVjdHVyZShOVUxMLCBjbGFzcyA9IFwid2FpdmVyXCIpIDpcbiAgQ2FsbGluZyAnc3RydWN0dXJlKE5VTEwsICopJyBpcyBkZXByZWNhdGVkLCBhcyBOVUxMIGNhbm5vdCBoYXZlIGF0dHJpYnV0ZXMuXG4gIENvbnNpZGVyICdzdHJ1Y3R1cmUobGlzdCgpLCAqKScgaW5zdGVhZC5cbldhcm5pbmcgaW4gc3RydWN0dXJlKE5VTEwsIGNsYXNzID0gXCJ3YWl2ZXJcIikgOlxuICBDYWxsaW5nICdzdHJ1Y3R1cmUoTlVMTCwgKiknIGlzIGRlcHJlY2F0ZWQsIGFzIE5VTEwgY2Fubm90IGhhdmUgYXR0cmlidXRlcy5cbiAgQ29uc2lkZXIgJ3N0cnVjdHVyZShsaXN0KCksICopJyBpbnN0ZWFkLlxuV2FybmluZyBpbiBzdHJ1Y3R1cmUoTlVMTCwgY2xhc3MgPSBcIndhaXZlclwiKSA6XG4gIENhbGxpbmcgJ3N0cnVjdHVyZShOVUxMLCAqKScgaXMgZGVwcmVjYXRlZCwgYXMgTlVMTCBjYW5ub3QgaGF2ZSBhdHRyaWJ1dGVzLlxuICBDb25zaWRlciAnc3RydWN0dXJlKGxpc3QoKSwgKiknIGluc3RlYWQuXG5XYXJuaW5nIGluIHN0cnVjdHVyZShOVUxMLCBjbGFzcyA9IFwid2FpdmVyXCIpIDpcbiAgQ2FsbGluZyAnc3RydWN0dXJlKE5VTEwsICopJyBpcyBkZXByZWNhdGVkLCBhcyBOVUxMIGNhbm5vdCBoYXZlIGF0dHJpYnV0ZXMuXG4gIENvbnNpZGVyICdzdHJ1Y3R1cmUobGlzdCgpLCAqKScgaW5zdGVhZC5cbldhcm5pbmcgaW4gc3RydWN0dXJlKE5VTEwsIGNsYXNzID0gXCJ3YWl2ZXJcIikgOlxuICBDYWxsaW5nICdzdHJ1Y3R1cmUoTlVMTCwgKiknIGlzIGRlcHJlY2F0ZWQsIGFzIE5VTEwgY2Fubm90IGhhdmUgYXR0cmlidXRlcy5cbiAgQ29uc2lkZXIgJ3N0cnVjdHVyZShsaXN0KCksICopJyBpbnN0ZWFkLlxuKiogaGVscFxuKioqIGluc3RhbGxpbmcgaGVscCBpbmRpY2VzXG4qKiBidWlsZGluZyBwYWNrYWdlIGluZGljZXNcbioqIGluc3RhbGxpbmcgdmlnbmV0dGVzXG4qKiB0ZXN0aW5nIGlmIGluc3RhbGxlZCBwYWNrYWdlIGNhbiBiZSBsb2FkZWRcbiogRE9ORSAoZ2dwbG90MilcbiJ9 -->
 <pre><code>Downloading package from url: http://cran.us.r-project.org/src/contrib/Archive/ggplot2/ggplot2_2.2.0.tar.gz
 Installing ggplot2
-'/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file --no-environ  \
-  --no-save --no-restore --quiet CMD INSTALL  \
-  '/private/var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T/RtmpAaTO2n/devtoolsb8f91d014424/ggplot2'  \
+'/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file --no-environ --no-save  \
+  --no-restore --quiet CMD INSTALL  \
+  '/private/var/folders/4z/p7yt7_4n4fj1jlyq6g4qhfbw0000gn/T/RtmpjhQYT9/devtools60f32e7d0b60/ggplot2'  \
   --library='/Library/Frameworks/R.framework/Versions/3.4/Resources/library'  \
   --install-tests 
 
@@ -454,18 +387,32 @@ Warning in structure(NULL, class = &quot;waiver&quot;) :
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p><br></p>
+</div>
+<div id="specifc-libirary-folder" class="section level1">
+<h1><span class="header-section-number">4</span> Specifc Libirary Folder</h1>
+<p><code>?install.packages</code></p>
+<p><code>install.packages(&quot;ggplot2&quot;, lib = &quot;specifc_folder_path&quot;)</code></p>
+<p><br></p>
 </div>
 <div id="using-rstudio-ide" class="section level1">
-<h1><span class="header-section-number">4</span> Using RStudio IDE</h1>
-<p>T.B.A.</p>
+<h1><span class="header-section-number">5</span> Using RStudio IDE</h1>
+<ul>
+<li>RStudio IDE -&gt; Packages -&gt; Install -&gt;
+<ul>
+<li>… Install from CRAN</li>
+<li>… or Instal from Package Archive File</li>
+</ul></li>
+</ul>
+<p><br></p>
 </div>
 <div id="using-command-line" class="section level1">
-<h1><span class="header-section-number">5</span> Using Command Line</h1>
-<p>T.B.A.</p>
+<h1><span class="header-section-number">6</span> Using Command Line</h1>
+<p><code>R CMD INSTALL --help</code></p>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBQYWNrYWdlcyIKb3V0cHV0OgogIGh0bWxfbm90ZWJvb2s6CiAgICBudW1iZXJfc2VjdGlvbnM6IHllcwogICAgdG9jOiB5ZXMKICAgIHRvY19kZXB0aDogMgogIGh0bWxfZG9jdW1lbnQ6CiAgICBkZl9wcmludDogcGFnZWQKICAgIHRvYzogeWVzCiAgICB0b2NfZGVwdGg6ICcyJwotLS0KCgojIEluc3RhbGxpbmcgUiBQYWNrYWdlcyBpbiBSIChCYXNpY3MpCgojIyBQYWNrYWdlcyBvbiBDUkFOCgpgYGB7cn0KIyBJbnN0YWxsIGEgcGFja2FnZSBmcm9tIENSQU4KaW5zdGFsbC5wYWNrYWdlcygiZGF0YS50YWJsZSIpICMgeW91IGNhbiBvbWl0ICIiCmBgYAoKYGBge3J9CiMgSW5zdGFsbCBtdWx0aXBsZSBwYWNrYWdlcyBmcm9tIENSQU4KaW5zdGFsbC5wYWNrYWdlcyhjKCJkYXRhLnRhYmxlIiwgImdncGxvdDIiKSkKYGBgCgojIyBQYWNrYWdlcyBvbiBHaXRIdWIKCmBgYHtyfQojIEZpcnN0LCB5b3UgbmVlZCBhIHBhY2thZ2UgY2FsbGVkICJkZXZ0b29scyIKaW5zdGFsbC5wYWNrYWdlcygiZGV2dG9vbHMiKQpgYGAKCmBgYHtyfQojIEluc3RhbGwgcGFja2FnZXMgZnJvbSBHaXRIdWIgKGUuZy4gREVWIHZlcnNpb24pCmxpYnJhcnkoImRldnRvb2xzIikKZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKCJ0aWR5dmVyc2UvZ2dwbG90MiIpCmBgYAoKPGJyPgoKIyBMb2FkaW5nIGFuZCBEZXRhY2hpbmcgUiBQYWNrYWdlcwoKYGBge3J9CiMgTG9hZCBkYXRhLnRhYmxlCmxpYnJhcnkoImRhdGEudGFibGUiKQpgYGAKCmBgYHtyfQojIERldGFjaCBkYXRhLnRhYmxlCmRldGFjaCgicGFja2FnZTpkYXRhLnRhYmxlIiwgdW5sb2FkID0gVFJVRSkKYGBgCgo8YnI+CgojIEluc3RhbGxpbmcgYSBTcGVjaWZpYyBWZXJzaW9uIG9mIFIgUGFja2FnZQoKYGBge3J9CiMgSW5zdGFsbCBhIHNwZWNpZmljIHZlcnNpb24gb2YgUiBwYWNrYWdlCiMgU2ltcGxlIHNvbHV0aW9uOiB1c2luZyBkZXZ0b29scwpsaWJyYXJ5KCJkZXZ0b29scyIpCmluc3RhbGxfdmVyc2lvbigiZ2dwbG90MiIsIAogICAgICAgICAgICAgICAgdmVyc2lvbiA9ICIyLjIuMCIsIAogICAgICAgICAgICAgICAgcmVwb3MgPSAiaHR0cDovL2NyYW4udXMuci1wcm9qZWN0Lm9yZyIpCmBgYAoKIyBVc2luZyBSU3R1ZGlvIElERQoKVC5CLkEuCgojIFVzaW5nIENvbW1hbmQgTGluZQoKVC5CLkEuCgoKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBQYWNrYWdlcyIKb3V0cHV0OgogIGh0bWxfbm90ZWJvb2s6CiAgICBudW1iZXJfc2VjdGlvbnM6IHllcwogICAgdG9jOiB5ZXMKICAgIHRvY19kZXB0aDogMgogIGh0bWxfZG9jdW1lbnQ6CiAgICBkZl9wcmludDogcGFnZWQKICAgIHRvYzogeWVzCiAgICB0b2NfZGVwdGg6ICcyJwotLS0KCgojIEluc3RhbGxpbmcgUiBQYWNrYWdlcyBpbiBSIChCYXNpY3MpCgojIyBQYWNrYWdlcyBvbiBDUkFOCgpgYGB7cn0KIyBJbnN0YWxsIGEgcGFja2FnZSBmcm9tIENSQU4KaW5zdGFsbC5wYWNrYWdlcygiZGF0YS50YWJsZSIpICMgeW91IGNhbiBvbWl0ICIiCmBgYAoKYGBge3J9CiMgSW5zdGFsbCBtdWx0aXBsZSBwYWNrYWdlcyBmcm9tIENSQU4KaW5zdGFsbC5wYWNrYWdlcyhjKCJkYXRhLnRhYmxlIiwgImdncGxvdDIiKSkKYGBgCgojIyBQYWNrYWdlcyBvbiBHaXRIdWIKCmBgYHtyfQojIEZpcnN0LCB5b3UgbmVlZCBhIHBhY2thZ2UgY2FsbGVkICJkZXZ0b29scyIKaW5zdGFsbC5wYWNrYWdlcygiZGV2dG9vbHMiKQpgYGAKCmBgYHtyfQojIEluc3RhbGwgcGFja2FnZXMgZnJvbSBHaXRIdWIgKGUuZy4gREVWIHZlcnNpb24pCmxpYnJhcnkoImRldnRvb2xzIikKZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKCJ0aWR5dmVyc2UvZ2dwbG90MiIpCmBgYAoKPGJyPgoKIyBMb2FkaW5nIGFuZCBEZXRhY2hpbmcgUiBQYWNrYWdlcwoKYGBge3J9CiMgTG9hZCBkYXRhLnRhYmxlCmxpYnJhcnkoImRhdGEudGFibGUiKQpgYGAKCmBgYHtyfQojIERldGFjaCBkYXRhLnRhYmxlCmRldGFjaCgicGFja2FnZTpkYXRhLnRhYmxlIiwgdW5sb2FkID0gVFJVRSkKYGBgCgo8YnI+CgojIEluc3RhbGxpbmcgYSBTcGVjaWZpYyBWZXJzaW9uIG9mIFIgUGFja2FnZQoKYGBge3J9CiMgSW5zdGFsbCBhIHNwZWNpZmljIHZlcnNpb24gb2YgUiBwYWNrYWdlCiMgU2ltcGxlIHNvbHV0aW9uOiB1c2luZyBkZXZ0b29scwpsaWJyYXJ5KCJkZXZ0b29scyIpCmluc3RhbGxfdmVyc2lvbigiZ2dwbG90MiIsIAogICAgICAgICAgICAgICAgdmVyc2lvbiA9ICIyLjIuMCIsIAogICAgICAgICAgICAgICAgcmVwb3MgPSAiaHR0cDovL2NyYW4udXMuci1wcm9qZWN0Lm9yZyIpCmBgYAoKPGJyPgoKIyBTcGVjaWZjIExpYmlyYXJ5IEZvbGRlcgoKYD9pbnN0YWxsLnBhY2thZ2VzYAoKYGluc3RhbGwucGFja2FnZXMoImdncGxvdDIiLCBsaWIgPSAic3BlY2lmY19mb2xkZXJfcGF0aCIpYAoKPGJyPgoKIyBVc2luZyBSU3R1ZGlvIElERQoKLSBSU3R1ZGlvIElERSAtPiBQYWNrYWdlcyAtPiBJbnN0YWxsIC0+CiAgICAtIC4uLiBJbnN0YWxsIGZyb20gQ1JBTgogICAgLSAuLi4gb3IgSW5zdGFsIGZyb20gUGFja2FnZSBBcmNoaXZlIEZpbGUKICAgIAo8YnI+CgojIFVzaW5nIENvbW1hbmQgTGluZQoKYFIgQ01EIElOU1RBTEwgLS1oZWxwYAoKCg==</div>
 
 
 

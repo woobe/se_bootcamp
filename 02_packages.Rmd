@@ -66,14 +66,26 @@ install_version("ggplot2",
                 repos = "http://cran.us.r-project.org")
 ```
 
+<br>
+
+# Specifc Libirary Folder
+
+`?install.packages`
+
+`install.packages("ggplot2", lib = "specifc_folder_path")`
+
+<br>
+
 # Using RStudio IDE
 
-T.B.A.
+- RStudio IDE -> Packages -> Install ->
+    - ... Install from CRAN
+    - ... or Instal from Package Archive File
+    
+<br>
 
 # Using Command Line
 
-T.B.A.
-
-
+`R CMD INSTALL --help`
 
 
